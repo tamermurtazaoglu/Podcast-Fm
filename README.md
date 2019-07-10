@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-This project is my first project on GitHub.
+This is my first project on GitHub.
