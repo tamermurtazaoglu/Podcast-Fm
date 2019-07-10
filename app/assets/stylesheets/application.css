@@ -91,6 +91,8 @@ body{
 }
 .button_block{
 	display:block;
+	margin: 0 auto;
+	padding:1rem 4rem;
 }
 
 
@@ -185,7 +187,7 @@ background-color:#ccc;}
 	background-position:bottom center;
 	background-repeat:none;
 	color:white;
-	background-image:url("../images/wallpaper_signin.jpg")
+	background-image:url("wallpaper_banner.jpg")
 }
 
 #banner h1{
