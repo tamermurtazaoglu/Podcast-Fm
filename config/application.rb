@@ -18,3 +18,5 @@ module PodcastFm
   end
 end
 
+# For Heroku access abort problem, I add this line:
+config.assets.initialize_on_precompile = false
