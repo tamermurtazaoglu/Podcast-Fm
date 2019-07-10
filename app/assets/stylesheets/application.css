@@ -13,3 +13,184 @@
  *= require_tree .
  *= require_self
  */
+
+
+// *{border:.5px solid #000;}
+body{
+	margin:0;
+	padding:0;
+	font-family:"HelveticaNeue";
+	width:100%;
+}
+#background{
+	background-image: url("wallpaper.jpg");
+	height: 100vh;
+	width: 100vw;
+	background-size:cover;
+	background-position: center;
+	text-align: center;
+}
+
+#background header{
+	padding: 3rem;	
+}
+
+#background header #logo{
+		float:left;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: white;
+		text-decoration: none;
+		letter-spacing: 5px;
+}
+
+#background header nav{
+	float:right;
+}
+
+#background header nav ul{
+	list-style:none;
+	margin:0;
+}
+
+#background header nav ul li{
+	display:inline;
+	margin-left:2.5rem;
+}
+
+#background header nav ul li a{
+	color:white;
+	text-decoration:none;	
+}
+
+
+#background h1{
+	color:white;
+	font-size:3.5rem;
+	font-weight:300;
+	letter-spacing:1px;
+	margin:7rem 0 2rem 0;
+}
+
+.button{
+	background-color:white;
+	text-decoration:none;
+	font-size:1rem;
+	padding:1rem 2rem;
+	border-radius:2rem;
+	outline: none;
+	border:none;
+	color:#555555;
+}
+.button_highlight{
+	background:#D4654A;
+	color:#fff;
+}
+.button_highlight:hover{
+	background:darken(#D4654A,7.5%);
+}
+.button_block{
+	display:block;
+}
+
+
+
+// PODCAST.CSS
+
+
+#banner{text-align: center;
+background-color:#ccc;}
+
+#main_header{
+	color:#000;
+	background-color:white;
+	padding:2.5rem 5rem;
+}
+
+#main_header #logo{
+	float:left;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#555;
+	text-decoration:none;
+}
+
+#main_header nav{
+	float:right;
+}
+
+#main_header nav ul{
+	list-style:none;
+	margin:0;
+}
+
+#main_header nav ul li{
+	display:inline;
+	margin-left:2.5rem;
+}
+
+#main_header nav ul li a{
+	color:black;
+	text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// APPLICATION.CSS
+
+.wrapper_wide{
+	width: 90%;
+	margin:0 auto;
+}
+.wrapper{
+	width: 80%;
+	margin:0 auto;
+}
+
+.wrapper_skinny{
+	width:50%;
+	margin:0 auto;
+}
+
+.cf:before, .cf:after{
+	content:"";
+	display:table;
+}
+
+.cf:after{
+	clear:both;
+}
+
+
+
+
+#banner{
+	text-align: center;
+	padding:2vw 2vh;
+	background-position:bottom center;
+	background-repeat:none;
+	color:white;
+	background-image:url("../images/wallpaper_signin.jpg")
+}
+
+#banner h1{
+
+}
+
+
+
