@@ -11,6 +11,8 @@ gem 'duktape'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'sdoc', '~> 1.0', group: :doc
+gem 'devise', '~> 4.6', '>= 4.6.2'
 
 
 gem 'bootsnap', '>= 1.1.0', require: false
