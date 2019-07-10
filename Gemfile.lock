@@ -198,10 +198,10 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   duktape
   jbuilder (~> 2.5)
-  pg
+  pg (~> 1.1, >= 1.1.4)
   puma (~> 3.11)
   rails (~> 5.2.3)
-  rails_12factor
+  rails_12factor (~> 0.0.3)
   sass-rails (~> 5.0)
   selenium-webdriver
   sqlite3
