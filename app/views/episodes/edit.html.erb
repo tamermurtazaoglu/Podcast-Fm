@@ -1,8 +1,8 @@
-
 <div id="podcast_show">
   <div id="show_banner">
     <div class="wrapper_skinny">
-      <h1>The Rocketship Podcast Dashboard</h1> 
+      <!-- <h1>The Rocketship Podcast Dashboard</h1>  -->
+      <h1>Edit episode: <br> <%= @episode.title %></h1>
     </div>
   </div>
 </div>
@@ -11,7 +11,7 @@
   <div class="wrapper_skinny">
     <ul>
       <li><%= link_to "Eposides", root_path %> </li>
-      <li><%= link_to "New Episode", new_podcast_episode_path(@podcast), class: "current" %></li>
+      <li><%= link_to "New Episode", new_podcast_episode_path(@podcast) %></li>
       <li><%= link_to "Account Settings",edit_podcast_registration_path %></li>
       <li><%= link_to "View Podcast", podcast_path(current_podcast) %></li>
     </ul>
