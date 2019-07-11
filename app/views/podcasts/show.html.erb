@@ -1,0 +1,86 @@
+	<div id="podcast_show">
+		<div id="show_banner">
+			<div class="wrapper_skinny">
+				<h1><%= @podcast.title %></h1>
+				<p class="description"><%= @podcast.description %></p>
+				<% unless @podcast.itunes.blank? %>
+					<%= link_to "iTunes", @podcast.itunes, class: "subscribe_link" %>
+				<% end %>
+
+				<% unless @podcast.stitcher.blank? %>
+					<%= link_to "Stitcher", @podcast.stitcher, class: "subscribe_link" %>
+				<% end %>
+
+				<% unless @podcast.podbay.blank? %>
+					<%= link_to "PodBay", @podcast.podbay, class: "subscribe_link" %>
+				<% end %>								
+
+			</div>
+		</div>
+	</div>
+
+	<div id="breadcrumb">
+		<%= link_to podcasts_path do %>
+			All Podcasts
+			<span>/</span>
+			The Rocketship Podcast
+		<% end %>
+	</div>
+
+	<div id="episodes">
+		<div class="wrapper_skinny">
+			<ul class="cf">
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="episode.html">
+							<img src="assets/images/avatar.jpg" alt="Pieter Levels">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="#">How to Pull Off 12 (Well Executed) Startups in 12 Months</a></h2>
+						<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod laboriosam praesentium, repellendus quis quas, nam saepe non rerum maiores, fuga rem tempore, voluptatum molestiae esse pariatur laborum deserunt reiciendis. Minima.</p>
+					</div>
+				</li>
+			<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="episode.html">
+							<img src="assets/images/avatar.jpg" alt="Pieter Levels">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="#">How to Pull Off 12 (Well Executed) Startups in 12 Months</a></h2>
+						<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod laboriosam praesentium, repellendus quis quas, nam saepe non rerum maiores, fuga rem tempore, voluptatum molestiae esse pariatur laborum deserunt reiciendis. Minima.</p>
+					</div>
+				</li>
+			<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="episode.html">
+							<img src="assets/images/avatar.jpg" alt="Pieter Levels">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="#">How to Pull Off 12 (Well Executed) Startups in 12 Months</a></h2>
+						<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod laboriosam praesentium, repellendus quis quas, nam saepe non rerum maiores, fuga rem tempore, voluptatum molestiae esse pariatur laborum deserunt reiciendis. Minima.</p>
+					</div>
+				</li>
+			<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="episode.html">
+							<img src="assets/images/avatar.jpg" alt="Pieter Levels">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="#">How to Pull Off 12 (Well Executed) Startups in 12 Months</a></h2>
+						<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod laboriosam praesentium, repellendus quis quas, nam saepe non rerum maiores, fuga rem tempore, voluptatum molestiae esse pariatur laborum deserunt reiciendis. Minima.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="pagination">
+		<span class="previous_page disabled">Previous</span>
+		<em class="current">1</em>
+		<a href="">2</a>
+		<a href="" class="next_page">Next</a>
+	</div>

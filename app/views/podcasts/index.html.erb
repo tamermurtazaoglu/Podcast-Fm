@@ -1,0 +1,30 @@
+
+	
+	<div id="banner">
+		<h1>Discover your new favorite podcast</h1>
+	</div>
+
+	<div id="podcasts" class="cf">
+		<div id="wrapper">
+			<ul>
+				<% @podcasts.each do |podcast| %>
+					<%= link_to podcast do %>
+						<li>
+							<img src="avatar.jpg" alt="Narwhals Podcast">
+							<div class="podcast_overview">
+								<h2><%= podcast.title %></h2>
+								<p class="episode_count">1 episode</p>
+							</div>
+						</li>					
+					<% end %>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+
+	<div class="pagination">
+		<span class="previous_page disabled">Previous</span>
+		<em class="current">1</em>
+		<a href="">2</a>
+		<a href="" class="next_page">Next</a>
+	</div>
