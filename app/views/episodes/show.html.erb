@@ -1,20 +1,17 @@
-	<div id="podcast_show">
-		<div id="show_banner">
-			<div class="wrapper_skinny">
-				<h1><%= @podcast.title %></h1>
-				<p class="description"><%= @podcast.description %></p>
-				<% unless @podcast.itunes.blank? %>
-					<%= link_to "iTunes", @podcast.itunes, class: "subscribe_link" %>
-				<% end %>
-
-				<% unless @podcast.stitcher.blank? %>
-					<%= link_to "Stitcher", @podcast.stitcher, class: "subscribe_link" %>
-				<% end %>
-
-				<% unless @podcast.podbay.blank? %>
-					<%= link_to "PodBay", @podcast.podbay, class: "subscribe_link" %>
-				<% end %>
-			</div>
+<div id="podcast_show">
+	<div id="show_banner">
+		<div class="wrapper_skinny">
+			<h1><%= @podcast.title %></h1>
+			<p class="description"><%= @podcast.description %></p>
+			<% unless @podcast.itunes.blank? %>
+				<a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+			<% end %>
+			<% unless @podcast.stitcher.blank? %>
+				<a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
+			<% end %>
+			<% unless @podcast.podbay.blank? %>
+				<a href="<%= @podcast.podbay %>" class="subscribe_link">PodBay</a>
+			<% end %>
 		</div>
 	</div>
 
@@ -22,45 +19,50 @@
 		<%= link_to podcasts_path do %>
 			All Podcasts
 			<span>/</span>
-			<%= link_to "#{@podcast.title}", podcast_path(@podcast) %>
+			<%= link_to @podcast.title, podcast_path(@podcast) %>
 			<span>/</span>
 			<%= @episode.title %>
 		<% end %>
 	</div>
 
-
 	<div id="episode_content">
 		<div class="wrapper_skinny">
 			<%= image_tag @episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
 			<h2><%= @episode.title %></h2>
-			<p class="description"> <%= @episode.description %> </p>
+			<p class="description"><%= @episode.description %></p>
+			<div class="audio">
+				<audio controls>
+				  <source src="<%= @episode.mp3.url %>" type="audio/mp3">
+				</audio>
+				<!-- OPTIONAL AUDIO PLAYER <audio src="<%= @episode.mp3.url %>" preload="auto" /> -->
+			</div>
 		</div>
 	</div>
-
 
 	<div id="episodes">
 		<div class="wrapper_skinny">
 			<ul class="cf">
 				<% @episodes.each do |episode| %>
-				<li class="cf">
-					<div class="episode_thumbnail">
-						<a href="<%= podcast_episode_path(@podcast,episode) %>">
-							<%= image_tag episode.episode_thumbnail.url(:medium)  %>
-						</a>
-					</div>
-					<div class="episode_overview">
-						<h2><%= link_to episode.title, podcast_episode_path(@podcast,episode) %></h2>
-						<p class="description"><%= truncate(episode.description, length:165) %></p>
-					</div>
-				</li>	
-				<% end %>				
+					<li class="cf">
+						<div class="episode_thumbnail">
+							<a href="episode.html">
+								<%= image_tag episode.episode_thumbnail.url(:medium) %>
+							</a>
+						</div>
+						<div class="episode_overview">
+							<h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
+							<p class="description"><%= truncate(episode.description, length: 160) %></p>
+						</div>
+					</li>
+				<% end %>
 			</ul>
 		</div>
 	</div>
+</div>
 
-	<div class="pagination">
-		<span class="previous_page disabled">Previous</span>
-		<em class="current">1</em>
-		<a href="">2</a>
-		<a href="" class="next_page">Next</a>
-	</div>
+<!-- ---- Optional audio player jQuery code ---- -->
+<!-- <script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script> -->
