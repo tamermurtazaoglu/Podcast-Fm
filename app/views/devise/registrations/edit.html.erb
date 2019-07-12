@@ -25,7 +25,7 @@
 
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true}) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
@@ -35,7 +35,12 @@
 
       <div class="field">
         <%= f.label :description %><br />
-        <%= f.text_field :description %>
+        <%= f.text_area :description %>
+      </div>
+
+      <div class="field">
+        <%= f.label :thumbnail %><br />
+        <%= f.file_field :thumbnail %>
       </div>
 
       <div class="field">
