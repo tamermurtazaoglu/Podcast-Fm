@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'sdoc', '~> 1.0', group: :doc
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'paperclip', '~> 6.1'
+gem 'will_paginate', '~> 3.1', '>= 3.1.7'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
