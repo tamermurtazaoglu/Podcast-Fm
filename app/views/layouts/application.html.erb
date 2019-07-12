@@ -11,14 +11,15 @@
   </head>
 
   <body>
+    </div>
     <% if alert %>
-      <p class="alert">
-        <%= alert %> 
-      </p>
+      <div class="notice_wrapper">
+        <p class="alert"><%= alert %></p>
+      </div>
     <% elsif notice %>
-      <p class="notice">
-        <%= notice %>
-      </p>
+      <div class="notice_wrapper">
+        <p class="notice"><%= notice %></p>
+      </div>
     <% end %>
 
   <% unless current_page?(root_path)%>
@@ -26,5 +27,16 @@
   <% end %>
 
     <%= yield %>
+
+    <script>
+      $(document).ready(function() {
+        setTimeOut(function(){
+          $(".notice_wrapper").fadeOut("slow", function(){
+            $(this).hide();
+          });
+        }, 4500);        
+      });
+
+    </script>
   </body>
 </html>
